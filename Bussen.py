@@ -1,4 +1,5 @@
 class Passagerare:
-    def __init__(self, person, age):
+    def __init__(self, person, ålder, kön):
         self.person = person
-        self.age = age
+        self.ålder = ålder
+        slef.kön = kön
