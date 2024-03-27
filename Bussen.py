@@ -3,3 +3,6 @@ class Passagerare:
         self.person = person
         self.ålder = ålder
         slef.kön = kön
+
+
+def peta():
