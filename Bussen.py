@@ -1,3 +1,5 @@
+import random as rand
+
 class Passagerare:
     def __init__(self, person, ålder, kön):
         self.person = person
@@ -5,4 +7,4 @@ class Passagerare:
         self.kön = kön
 
 
-def peta():
+
