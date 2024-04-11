@@ -1,6 +1,6 @@
 import random as rand
 
-class Passagerare:
+class Person:
     def __init__(self, namn, ålder, kön):
         self.namn = person
         self.ålder = ålder
