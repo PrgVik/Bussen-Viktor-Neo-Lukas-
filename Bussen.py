@@ -11,6 +11,10 @@ def plocka_upp():
     if len(passagerare_lista) >= 25:
         print("Bussen är full. Kan inte lägga till fler passagerare.")
         return
+    for passager in passagerare_lista:
+        if passager.namn.lower() == namn.lower():
+            print("Namnet är upptaget.")
+            return
     namn = input("Ange passagerarens namn: ")
     ålder = int(input("Ange passagerarens ålder: "))
     kön = input("Ange passagerarens kön: ")
