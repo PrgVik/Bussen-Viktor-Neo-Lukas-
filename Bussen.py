@@ -11,13 +11,22 @@ def plocka_upp():
     if len(passagerare_lista) >= 25:
         print("Bussen är full. Kan inte lägga till fler passagerare.")
         return
+    namn = input("Ange passagerarens namn: ")
     for passager in passagerare_lista:
         if passager.namn.lower() == namn.lower():
             print("Namnet är upptaget.")
             return
-    namn = input("Ange passagerarens namn: ")
+    if namn == "":
+        print("Måste skriva, försök igen")
+        return
     ålder = int(input("Ange passagerarens ålder: "))
+    if ålder == "":
+        print("Måste skriva, försök igen")
+        return
     kön = input("Ange passagerarens kön: ")
+    if kön == "":
+        print("Måste skriva, försök igen")
+        return
     passager = Person(namn, ålder, kön)
     passagerare_lista.append(passager)
     print("Passagerare tillagd!")
@@ -47,7 +56,7 @@ def beräkna_medelålder():
     medelålder = sum(passager.ålder for passager in passagerare_lista) / len(passagerare_lista)
     print(f"Medelåldern av passagerarna är: {medelålder:.2f}")
 
-# Övriga funktioner kan implementeras på liknande sätt
+
 
 def main():
     while True:
