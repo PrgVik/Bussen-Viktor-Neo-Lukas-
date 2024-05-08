@@ -19,11 +19,16 @@ def plocka_upp():
     if namn == "":
         print("Måste skriva, försök igen")
         return
-    ålder = int(input("Ange passagerarens ålder: "))
-    if ålder == "":
-        print("Måste skriva, försök igen")
+    ålder_input = input("Ange passagerarens ålder: ")
+    try:
+        ålder = int(ålder_input)
+    except ValueError:
+        print("Ogiltigt åldersvärde. Försök igen.")
         return
-    kön = input("Ange passagerarens kön: ")
+    kön = input("Ange passagerarens kön[Man/Kvinna]: ")
+    if kön.lower() != "man" and kön.lower() != "kvinna":
+        print("Kan bara välja Man eller Kvinna")
+        return
     if kön == "":
         print("Måste skriva, försök igen")
         return
